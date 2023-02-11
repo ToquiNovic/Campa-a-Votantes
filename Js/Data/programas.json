@@ -1,0 +1,227 @@
+[
+    {
+     "Educacion": "Pregrado",
+     "Facultad": "Ciencias Agropecuarias",
+     "Programa": "Medicina veterinaria y Zootecnia"
+    },
+    {
+     "Educacion": "Pregrado",
+     "Facultad": "Ciencias Básicas",
+     "Programa": "Biología"
+    },
+    {
+     "Educacion": "Pregrado",
+     "Facultad": "Ciencias Básicas",
+     "Programa": "Química"
+    },
+    {
+     "Educacion": "Pregrado",
+     "Facultad": "Contables, Económicas y Administrativas",
+     "Programa": "Administración de Empresas"
+    },
+    {
+     "Educacion": "Pregrado",
+     "Facultad": "Contables, Económicas y Administrativas",
+     "Programa": "Contaduría Pública"
+    },
+    {
+     "Educacion": "Pregrado",
+     "Facultad": "Educación",
+     "Programa": "Licenciatura en Ciencias Sociales"
+    },
+    {
+     "Educacion": "Pregrado",
+     "Facultad": "Educación",
+     "Programa": "Licenciatura en Educación Artística y Cultural"
+    },
+    {
+     "Educacion": "Pregrado",
+     "Facultad": "Educación",
+     "Programa": "Licenciatura en Educación Básica con énfasis en Educación Artística"
+    },
+    {
+     "Educacion": "Pregrado",
+     "Facultad": "Educación",
+     "Programa": "Licenciatura en Educación Física, Deportes y Recreación"
+    },
+    {
+     "Educacion": "Pregrado",
+     "Facultad": "Educación",
+     "Programa": "Licenciatura en Lenguas Extranjeras con Énfasis en Inglés"
+    },
+    {
+     "Educacion": "Pregrado",
+     "Facultad": "Educación",
+     "Programa": "Licenciatura en Literatura y Lengua Castellana"
+    },
+    {
+     "Educacion": "Pregrado",
+     "Facultad": "Educación",
+     "Programa": "Licenciatura en Matemáticas"
+    },
+    {
+     "Educacion": "Pregrado",
+     "Facultad": "Educación",
+     "Programa": "Psicología"
+    },
+    {
+     "Educacion": "Pregrado",
+     "Facultad": "Derecho y Ciencias Políticas",
+     "Programa": "Derecho"
+    },
+    {
+     "Educacion": "Pregrado",
+     "Facultad": "Ingeniería",
+     "Programa": "Ingeniería Agroecológica"
+    },
+    {
+     "Educacion": "Pregrado",
+     "Facultad": "Ingeniería",
+     "Programa": "Ingeniería de Alimentos"
+    },
+    {
+     "Educacion": "Pregrado",
+     "Facultad": "Ingeniería",
+     "Programa": "Ingeniería de Sistemas"
+    },
+    {
+     "Educacion": "Posgrado",
+     "Facultad": "Ciencias Agropecuarias",
+     "Programa": "Especialización en Acuicultura"
+    },
+    {
+     "Educacion": "Posgrado",
+     "Facultad": "Ciencias Agropecuarias",
+     "Programa": "Maestría en Sistemas Sostenibles de Producción"
+    },
+    {
+     "Educacion": "Posgrado",
+     "Facultad": "Ciencias Agropecuarias",
+     "Programa": "Maestría en Agroforestería"
+    },
+    {
+     "Educacion": "Posgrado",
+     "Facultad": "Ciencias Agropecuarias",
+     "Programa": "Doctorado en Ciencias Naturales y Desarrollo Sustentable"
+    },
+    {
+     "Educacion": "Posgrado",
+     "Facultad": "Ciencias Básicas",
+     "Programa": "Maestría en Ciencias Biológicas"
+    },
+    {
+     "Educacion": "Posgrado",
+     "Facultad": "Contables, Económicas y Administrativas",
+     "Programa": "Especialización en Formulación y Evaluación de Proyectos"
+    },
+    {
+     "Educacion": "Posgrado",
+     "Facultad": "Contables, Económicas y Administrativas",
+     "Programa": "Especialización en Gerencia Tributaria"
+    },
+    {
+     "Educacion": "Posgrado",
+     "Facultad": "Contables, Económicas y Administrativas",
+     "Programa": "Especialización en Gerencia del Talento Humano"
+    },
+    {
+     "Educacion": "Posgrado",
+     "Facultad": "Contables, Económicas y Administrativas",
+     "Programa": "Especialización en Control Interno y Aseguramiento"
+    },
+    {
+     "Educacion": "Posgrado",
+     "Facultad": "Contables, Económicas y Administrativas",
+     "Programa": "Especialización en Gerencia de Empresas Agropecuarias y Rurales"
+    },
+    {
+     "Educacion": "Posgrado",
+     "Facultad": "Contables, Económicas y Administrativas",
+     "Programa": "Especialización en Normas Internacionales de Información Financiera"
+    },
+    {
+     "Educacion": "Posgrado",
+     "Facultad": "Contables, Económicas y Administrativas",
+     "Programa": "Maestría en Tributación"
+    },
+    {
+     "Educacion": "Posgrado",
+     "Facultad": "Contables, Económicas y Administrativas",
+     "Programa": "Maestría en Administración"
+    },
+    {
+     "Educacion": "Posgrado",
+     "Facultad": "Contables, Económicas y Administrativas",
+     "Programa": "Maestría en Gestión y Evaluación de Proyectos"
+    },
+    {
+     "Educacion": "Posgrado",
+     "Facultad": "Educación",
+     "Programa": "Especialización en Pedagogía"
+    },
+    {
+     "Educacion": "Posgrado",
+     "Facultad": "Educación",
+     "Programa": "Maestría en Ciencias de Ia Educación"
+    },
+    {
+     "Educacion": "Posgrado",
+     "Facultad": "Educación",
+     "Programa": "Doctorado en Educación y Cultura Ambiental"
+    },
+    {
+     "Educacion": "Posgrado",
+     "Facultad": "Derecho y Ciencias Políticas",
+     "Programa": "Especializacion en Derecho Agrario"
+    },
+    {
+     "Educacion": "Posgrado",
+     "Facultad": "Derecho y Ciencias Políticas",
+     "Programa": "Especialización en Derecho Contencioso Administrativo"
+    },
+    {
+     "Educacion": "Posgrado",
+     "Facultad": "Derecho y Ciencias Políticas",
+     "Programa": "Especialización en Derecho Ambiental"
+    },
+    {
+     "Educacion": "Posgrado",
+     "Facultad": "Ingeniería",
+     "Programa": "Especialización en Tecnologías de la Información y la Comunicación para la Innovación Educativa"
+    },
+    {
+     "Educacion": "Posgrado",
+     "Facultad": "Ingeniería",
+     "Programa": "Especialización en Teleinformática"
+    },
+    {
+     "Educacion": "Posgrado",
+     "Facultad": "Ingeniería",
+     "Programa": "Maestría en Tecnologías de la Información y la Comunicación"
+    },
+    {
+     "Educacion": "Educación a Distancia",
+     "Facultad": "Tecnológicos",
+     "Programa": "Tecnología en Criminalística"
+    },
+    {
+     "Educacion": "Educación a Distancia",
+     "Facultad": "Profesionales",
+     "Programa": "Administración Financiera"
+    },
+    {
+     "Educacion": "Educación a Distancia",
+     "Facultad": "Profesionales",
+     "Programa": "Licenciatura en Lengua Castellana"
+    },
+    {
+     "Educacion": "Educación a Distancia",
+     "Facultad": "Profesionales",
+     "Programa": "Licenciatura en Educación Infantil"
+    },
+    {
+     "Educacion": "Educación a Distancia",
+     "Facultad": "Profesionales",
+     "Programa": "Mercadeo"
+    }
+   ]

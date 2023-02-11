@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="initial-scale=1, shrink-to-fit=no, width=device-width" name="viewport">
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Roboto+Mono:300,400,700|Roboto+Slab:300,400,700"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <style>
+        h2 {
+            color: #276f32;
+            font-weight: 800;
+        }
+    </style>
+
+    <!-- Add Material CSS, replace Bootstrap CSS -->
+    <link href="./Css/material.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./Css/index.css">
+
+    <link rel="Icon" href="./Img/iconudla.gif">
+    <title>Votantes | Encuesta</title>
+</head>
+
+<body>
+    <div class="container border mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-12 mb-5">
+                <h2 class="text-center mt-3">Encuesta
+                    <hr>
+                </h2>
+                <div class=" justify-content-center">
+                    <img src="./Img/banner-encuesta.jpeg" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <div class="justify-content-center" id="formContainer">
+            <form id="my-google-sheet">
+                <div class="form-group">
+                    <label for="Pregunta_1">¿Que beneficios quisiera recibir como graduado de la Universidad
+                        de la Amazonia?</label>
+                    <input type="text" name="Pregunta_1" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="Pregunta_2">¿Que cambios considera deben realizarse en la relación
+                        Graduado - Universidad?</label>
+                    <input type="text" name="Pregunta_2" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="Pregunta_3">¿Mejor cambiar la palabra graduado por egresado?</label>
+                    <input type="text" name="Pregunta_3" class="form-control" required>
+                </div>
+            </form>
+            <div class="form-group mb-5 text-center mt-5">
+                <button onclick="SendFormGoogleSheetsEncuesta()" id="btnSubmit" class="btn btn-danger mb-2">Terminar Encuesta</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="./Js/material.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script>
+        function SendFormGoogleSheetsEncuesta() {
+            $.ajax({
+        url: 'https://script.google.com/macros/s/AKfycbxz9RWhls91yojak9h_bYDS431tyFcw_zZ5OdHIvMUtWQICEfdEiCIKKdnZR6o-H03S/exec',
+        type: 'post',
+        data: $("#my-google-sheet").serializeArray(),
+        success: function () {
+          // mostrar mensaje de éxito y limpiar el formulario
+          swal({
+            title: "¡Enviado!",
+            text: "Gracias por enviar tus datos.",
+            icon: "success",
+            button: "OK",
+          }).then(() => {
+            document.getElementById("my-google-sheet").reset();
+          });
+        },
+        error: function () {
+          alert("Error en el Registro :(")
+        }
+      });
+    }
+  </script>
+
+  <script>
+    $("#btnSubmit").click(function () {
+      $(this).prop("disabled", true); //deshabilitamos el botón
+      $(this).html(
+        `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviando...` //añadimos el spinner
+      );
+
+      setTimeout(function () {
+        $("#btnSubmit").prop("disabled", false); //habilitamos el botón
+        $("#btnSubmit").html("Enviar"); //cambiamos el texto del botón
+        $("my-google-sheet").trigger("reset"); //limpiamos el formulario
+      }, 3000);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="initial-scale=1, shrink-to-fit=no, width=device-width" name="viewport">
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Roboto+Mono:300,400,700|Roboto+Slab:300,400,700"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <!-- Add Material CSS, replace Bootstrap CSS -->
+  <link href="./Css/material.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./Css/index.css">
+
+  <link rel="Icon" href="./Img/iconudla.gif">
+  <title>Votantes</title>
+  
+</head>
+
+<body>
+  <div class="container border mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-10 mb-5">
+        <h2 class="text-center mt-3">Formulario Votantes
+          <hr>
+        </h2>
+        <div class=" justify-content-center">
+          <img src="./Img/banner 0001.png" alt="" class="img-fluid">
+        </div>
+      </div>
+    </div>
+
+    <div class="justify-content-center" id="formContainer">
+      <form id="my-google-sheet">
+        <div class="form-group ">
+          <label for="Nombre">Nombre Completo</label>
+          <input type="text" name="Nombre_Completo" class="form-control" required>
+        </div>
+
+        <div class="form-group ">
+          <label for="Nivel">Nivel de Educacion Superior</label>
+          <select name="Nivel" id="nivel_educacion" class="form-control">
+            <option value="">Seleccione Nivel de Educacion Superior...</option>
+          </select>
+        </div>
+
+        <div class="form-group ">
+          <label for="Facultad">Facultad</label>
+          <select name="Facultad" id="facultad" class="form-control">
+            <option value="">Seleccione Facultad...</option>
+          </select>
+        </div>
+
+        <div class="form-group ">
+          <label for="Programa">Programa</label>
+          <select name="Programa" id="programa" class="form-control">
+            <option value="">Seleccione Programa...</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="Celular">Celular</label>
+          <input type="number" name="Celular" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label for="Fecha_Graduacion">Fecha de Graduación</label>
+          <input type="date" name="Fecha_Graduacion" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label for="Departamento_Labura">¿Departamento donde Labora?</label>
+          <select name="Departamento_Labura" id="department" class="form-control">
+            <option value="">Seleccione un Departamento...</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="Municipio_Labura">¿Municipio donde Labora?</label>
+          <select name="Municipio_Labura" id="municipality" class="form-control">
+            <option value="">Seleccione el Municipio...</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="Empresa">Empresa</label>
+          <input type="text" name="Empresa" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label for="Lugar_Votacion">Lugar Votación</label>
+          <select name="Lugar_Votacion" id="Lugar" class="form-control">
+            <option value="">Seleccione Lugar de Votacion...</option>
+            <option value="Sede Leticia">Sede Leticia</option>
+            <option value="Sede Guaviare">Sede Guaviare</option>
+            <option value="Sede Putumayo">Sede Putumayo</option>
+            <option value="Sede Yari">Sede Yari</option>
+            <option value="Sede San José del Fragua">Sede San José del Fragua</option>
+            <option value="Sede Cartagena de Chaira">Sede Cartagena de Chaira</option>
+            <option value="Sede El Doncello">Sede El Doncello</option>
+            <option value="Sede Pitalito">Sede Pitalito</option>
+            <option value="Sede Florencia">Sede Florencia</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="Referenica">Referenica</label>
+          <input type="text" name="Referenica" class="form-control" required>
+        </div>
+      </form>
+      <div class="form-group mb-5 text-center mt-5">
+        <button onclick="SendFormGoogleSheets()" id="btnSubmit" class="btn btn-danger mb-2">Enviar Formulario</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <script src="./Js/colombia.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="./Js/material.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script>
+    function SendFormGoogleSheets() {
+      $.ajax({
+        url: 'https://script.google.com/macros/s/AKfycbz_L127l1PfSRkVITN2VgrXgAW6I_afB15I-TgloUWROhXYKdTdyv9dIPcjsxOsCOQ/exec',
+        type: 'post',
+        data: $("#my-google-sheet").serializeArray(),
+        success: function () {
+          // mostrar mensaje de éxito y limpiar el formulario
+          swal({
+            title: "¡Enviado!",
+            text: "Gracias por enviar tus datos.",
+            icon: "success",
+            button: "OK",
+          }).then(() => {
+            document.getElementById("my-google-sheet").reset();
+          });
+        },
+        error: function () {
+          alert("Error en el Registro :(")
+        },
+      });
+    }
+  </script>
+
+  <script>
+    $("#btnSubmit").click(function () {
+      $(this).prop("disabled", true); //deshabilitamos el botón
+      $(this).html(
+        `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviando...` //añadimos el spinner
+      );
+
+      setTimeout(function () {
+        $("#btnSubmit").prop("disabled", false); //habilitamos el botón
+        $("#btnSubmit").html("Enviar"); //cambiamos el texto del botón
+      }, 3000);
+    });
+  </script>
+</body>
+
+</html>
